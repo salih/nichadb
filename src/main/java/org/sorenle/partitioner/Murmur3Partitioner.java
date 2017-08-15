@@ -4,6 +4,8 @@ import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hasher;
 import org.sorenle.node.NichaNode;
 
+import java.nio.charset.Charset;
+
 public class Murmur3Partitioner implements Partitioner{
     private HashFunction hashFunction;
     private Hasher hasher;
@@ -13,42 +15,43 @@ public class Murmur3Partitioner implements Partitioner{
 
     @Override
     public long getHash(int key) {
-        return 0;
+        return hasher.putInt(key).hash().padToLong();
     }
 
     @Override
     public long getHash(long key) {
-        return 0;
+        return hasher.putLong(key).hash().padToLong();
     }
 
     @Override
     public long getHash(String key) {
-        return 0;
+        return hasher.putString(key, Charset.forName("UTF-8")).hash().padToLong();
     }
 
     @Override
     public long getHash(double key) {
-        return 0;
+        return hasher.putDouble(key).hash().padToLong();
     }
 
     @Override
     public long getHash(char key) {
-        return 0;
+        return hasher.putChar(key).hash().padToLong();
     }
 
     @Override
     public long getHash(short key) {
-        return 0;
+        return hasher.putShort(key).hash().padToLong();
     }
 
     @Override
     public long getHash(byte[] key) {
-        return 0;
+        return hasher.putBytes(key).hash().padToLong();
     }
 
     @Override
     public long getHash(byte key) {
-        return 0;
+        return hasher.putLong(key).hash().padToLong();
+
     }
 
     protected HashFunction getHashFunction(){
