@@ -4,23 +4,6 @@ import org.sorenle.node.NichaNode;
 
 public interface Partitioner {
 
-    NichaNode getPartitionByKey(int key);
-
-    NichaNode getPartitionByKey(long key);
-
-    NichaNode getPartitionByKey(String key);
-
-    NichaNode getPartitionByKey(double key);
-
-    NichaNode getPartitionByKey(char key);
-
-    NichaNode getPartitionByKey(short key);
-
-    NichaNode getPartitionByKey(byte[] key);
-
-    NichaNode getPartitionByKey(byte key);
-
-
     long getHash(int key);
 
     long getHash(long key);
