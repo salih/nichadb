@@ -15,7 +15,11 @@ public class Murmur3Test {
     @Test
     public void generateMurmurHash(){
         HashFunction hf = Hashing.murmur3_128();
-        HashCode hc = hf.newHasher().putString("Hey there", Charsets.UTF_8).hash();
-        logger.info(hc.toString());
+        for (int i = 0; i < 10; i++) {
+            HashCode hc = hf.newHasher().putInt(i).hash();
+
+            logger.info(hc.padToLong());
+        }
+
     }
 }
