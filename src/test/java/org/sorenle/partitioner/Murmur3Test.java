@@ -16,7 +16,7 @@ public class Murmur3Test {
     public void generateMurmurHash(){
         HashFunction hf = Hashing.murmur3_128();
         for (int i = 0; i < 10; i++) {
-            HashCode hc = hf.newHasher().put(i).hash();
+            HashCode hc = hf.newHasher().putInt(i).hash();
 
             logger.info(hc.padToLong());
         }
