@@ -9,8 +9,7 @@ public class Murmur3Partitioner implements Partitioner{
     private Hasher hasher;
 
     //Only create object via builder
-    private Murmur3Partitioner(){
-        hasher = hashFunction.newHasher();}
+    public Murmur3Partitioner(){}
 
     @Override
     public long getHash(int key) {
@@ -50,5 +49,13 @@ public class Murmur3Partitioner implements Partitioner{
     @Override
     public long getHash(byte key) {
         return 0;
+    }
+
+    protected HashFunction getHashFunction(){
+        return hashFunction;
+    }
+    protected void setHashFunction(HashFunction hashFunction){
+        this.hashFunction = hashFunction;
+        hasher = hashFunction.newHasher();
     }
 }
