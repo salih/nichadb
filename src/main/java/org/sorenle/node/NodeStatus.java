@@ -1,6 +1,5 @@
 package org.sorenle.node;
 
-import javax.xml.soap.Node;
 
 public class NodeStatus {
     //TODO implement
@@ -31,5 +30,12 @@ public class NodeStatus {
     }
     public boolean isReadyToJoin(){
         return joinStatus.equals(NodeStatusCode.UP);
+    }
+
+    public NodeStatus(NodeStatusCode joinStatus) {
+        this.joinStatus = joinStatus;
+    }
+
+    public NodeStatus() {
     }
 }
