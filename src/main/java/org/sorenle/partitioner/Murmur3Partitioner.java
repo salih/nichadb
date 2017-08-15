@@ -12,47 +12,6 @@ public class Murmur3Partitioner implements Partitioner{
     private Murmur3Partitioner(){
         hasher = hashFunction.newHasher();}
 
-
-    @Override
-    public NichaNode getPartitionByKey(int key) {
-        return null;
-    }
-
-    @Override
-    public NichaNode getPartitionByKey(long key) {
-        return null;
-    }
-
-    @Override
-    public NichaNode getPartitionByKey(String key) {
-        return null;
-    }
-
-    @Override
-    public NichaNode getPartitionByKey(double key) {
-        return null;
-    }
-
-    @Override
-    public NichaNode getPartitionByKey(char key) {
-        return null;
-    }
-
-    @Override
-    public NichaNode getPartitionByKey(short key) {
-        return null;
-    }
-
-    @Override
-    public NichaNode getPartitionByKey(byte[] key) {
-        return null;
-    }
-
-    @Override
-    public NichaNode getPartitionByKey(byte key) {
-        return null;
-    }
-
     @Override
     public long getHash(int key) {
         return 0;
