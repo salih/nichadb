@@ -6,6 +6,13 @@ public class NodeStatus {
     private NodeStatusCode joinStatus;
     private boolean onSync;
 
+    public NodeStatus(NodeStatusCode joinStatus) {
+        this.joinStatus = joinStatus;
+    }
+
+    public NodeStatus() {
+    }
+
     public NodeStatusCode getJoinStatus() {
         return joinStatus;
     }
@@ -22,20 +29,15 @@ public class NodeStatus {
         this.onSync = onSync;
     }
 
-    public boolean hasJoined(){
+    public boolean hasJoined() {
         return joinStatus.equals(NodeStatusCode.UP_AND_JOINED);
     }
-    public boolean isDown(){
+
+    public boolean isDown() {
         return joinStatus.equals(NodeStatusCode.DOWN);
     }
-    public boolean isReadyToJoin(){
+
+    public boolean isReadyToJoin() {
         return joinStatus.equals(NodeStatusCode.UP);
-    }
-
-    public NodeStatus(NodeStatusCode joinStatus) {
-        this.joinStatus = joinStatus;
-    }
-
-    public NodeStatus() {
     }
 }

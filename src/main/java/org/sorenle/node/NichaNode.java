@@ -33,14 +33,13 @@ public class NichaNode {
         this.status = status;
     }
 
-    public Long getMinimumRange(){
+    public Long getMinimumRange() {
         return range.getMinimumRange();
     }
 
-    public Long getMaximumRange(){
+    public Long getMaximumRange() {
         return range.getMaximumRange();
     }
-
 
 
 }

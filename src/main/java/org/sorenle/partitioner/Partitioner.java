@@ -1,7 +1,5 @@
 package org.sorenle.partitioner;
 
-import org.sorenle.node.NichaNode;
-
 public interface Partitioner {
 
     long getHash(int key);

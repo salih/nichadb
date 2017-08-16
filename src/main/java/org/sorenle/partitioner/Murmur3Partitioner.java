@@ -2,16 +2,16 @@ package org.sorenle.partitioner;
 
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hasher;
-import org.sorenle.node.NichaNode;
 
 import java.nio.charset.Charset;
 
-public class Murmur3Partitioner implements Partitioner{
+public class Murmur3Partitioner implements Partitioner {
     private HashFunction hashFunction;
     private Hasher hasher;
 
     //Only create object via builder
-    public Murmur3Partitioner(){}
+    public Murmur3Partitioner() {
+    }
 
     @Override
     public long getHash(int key) {
@@ -54,10 +54,11 @@ public class Murmur3Partitioner implements Partitioner{
 
     }
 
-    protected HashFunction getHashFunction(){
+    protected HashFunction getHashFunction() {
         return hashFunction;
     }
-    protected void setHashFunction(HashFunction hashFunction){
+
+    protected void setHashFunction(HashFunction hashFunction) {
         this.hashFunction = hashFunction;
         hasher = hashFunction.newHasher();
     }
