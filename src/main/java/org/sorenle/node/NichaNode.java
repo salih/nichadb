@@ -8,6 +8,7 @@ public class NichaNode {
     private int port;
     private NodeStatus status;
 
+
     public InetAddress getIp() {
         return ip;
     }
