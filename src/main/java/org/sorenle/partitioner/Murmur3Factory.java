@@ -3,9 +3,9 @@ package org.sorenle.partitioner;
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hashing;
 
-public class Murmur3Builder {
+public class Murmur3Factory {
 
-    public Murmur3Builder() {
+    public Murmur3Factory() {
     }
 
     public static Murmur3Partitioner create128BitHasher(){
