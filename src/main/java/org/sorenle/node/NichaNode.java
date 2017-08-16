@@ -7,7 +7,7 @@ public class NichaNode {
     private InetAddress ip;
     private int port;
     private NodeStatus status;
-
+    private NodeRange range;
 
     public InetAddress getIp() {
         return ip;
@@ -32,4 +32,15 @@ public class NichaNode {
     public void setStatus(NodeStatus status) {
         this.status = status;
     }
+
+    public Long getMinimumRange(){
+        return range.getMinimumRange();
+    }
+
+    public Long getMaximumRange(){
+        return range.getMaximumRange();
+    }
+
+
+
 }
