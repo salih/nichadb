@@ -1,8 +1,13 @@
 package org.sorenle.node;
 
+/**
+ * NodeStatus is a class that represent the status of node in the cluster. Cluster managers can see and change the status of nodes in cluster.
+ * @see NodeStatusCode To learn what status can a node have
+ *
+ */
 
 public class NodeStatus {
-    //TODO implement
+
     private NodeStatusCode joinStatus;
     private boolean onSync;
 
