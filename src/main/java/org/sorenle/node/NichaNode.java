@@ -1,6 +1,7 @@
 package org.sorenle.node;
 
 import java.net.InetAddress;
+import java.util.List;
 
 /**
  * Nicha nodes are resillient and masterless. That means there are no node that have a privilige among any other node in cluster.
@@ -13,6 +14,7 @@ public class NichaNode {
     private int port;
     private NodeStatus status;
     private NodeRange range;
+    private List<NodeRange> replicationRange;
 
     public InetAddress getIp() {
         return ip;
@@ -45,6 +47,16 @@ public class NichaNode {
     public Long getMaximumRange() {
         return range.getMaximumRange();
     }
+
+    public long getMinimumReplicationRange(){
+          return replicationRange.stream().mapToLong(NodeRange::getMinimumRange).min().orElse(Long.MIN_VALUE);
+    }
+
+    public long getMaximumReplicationRange(){
+        return replicationRange.stream().mapToLong(NodeRange::getMaximumRange).max().orElse(Long.MAX_VALUE);
+    }
+
+
 
 
 }
