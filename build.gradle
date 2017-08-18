@@ -13,8 +13,8 @@ targetCompatibility = 1.8
 
 repositories {
         
-     //maven { url "https://repo.maven.apache.org/maven2" }
-     mavenCentral()
+     maven { url "https://repo.maven.apache.org/maven2" }
+     //mavenCentral()
      mavenLocal()
 }
 dependencies {
