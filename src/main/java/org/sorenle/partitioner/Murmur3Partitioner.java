@@ -66,16 +66,12 @@ public class Murmur3Partitioner implements Partitioner {
         hasher = hashFunction.newHasher();
     }
     //TODO implement node range
-    public int splitRange(long key, int nodeCount){
+    public int splitRange(long key, int nodeCount) throws EmptyClusterException {
 
         if(nodeCount>0){
         return 0;
         }else {
-            try {
                 throw new EmptyClusterException("There is no node in the cluster.");
-            } catch (EmptyClusterException e) {
-                e.printStackTrace();
-            }
         }
 
     }
