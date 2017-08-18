@@ -2,7 +2,10 @@ package org.sorenle.partitioner;
 
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hasher;
+import org.sorenle.cluster.EmptyClusterException;
+import org.sorenle.node.NodeRange;
 
+import java.math.BigInteger;
 import java.nio.charset.Charset;
 
 public class Murmur3Partitioner implements Partitioner {
@@ -61,5 +64,19 @@ public class Murmur3Partitioner implements Partitioner {
     protected void setHashFunction(HashFunction hashFunction) {
         this.hashFunction = hashFunction;
         hasher = hashFunction.newHasher();
+    }
+    //TODO implement node range
+    public int splitRange(long key, int nodeCount){
+
+        if(nodeCount>0){
+        return 0;
+        }else {
+            try {
+                throw new EmptyClusterException("There is no node in the cluster.");
+            } catch (EmptyClusterException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 }

@@ -3,6 +3,8 @@ package org.sorenle.partitioner;
 import com.google.common.hash.Hashing;
 import org.junit.Test;
 
+import java.nio.charset.Charset;
+
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
@@ -39,5 +41,12 @@ public class Murmur3FactoryTest {
         assertFalse(p1.equals(p));
 
 
+    }
+
+    @Test
+    public void testRange(){
+        Murmur3Partitioner p = Murmur3Factory.create32BitHasher();
+
+        System.out.println(p.splitRange(p.getHash("Hello"),1));
     }
 }
