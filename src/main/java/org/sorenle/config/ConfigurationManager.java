@@ -1,4 +1,4 @@
-package org.sorenle.util;
+package org.sorenle.config;
 
 public class ConfigurationManager {
 
