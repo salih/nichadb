@@ -1,7 +1,7 @@
 package org.sorenle.config;
 
 public class Config {
-
+    // Cluster name
     public String cluster_name;
 
     // How frequently should gossip check for alive nodes in cluster in milliseconds
