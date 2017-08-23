@@ -1,2 +1,1 @@
-cluster:
-    name:local-dummy
+cluster_name: nicha-local-test

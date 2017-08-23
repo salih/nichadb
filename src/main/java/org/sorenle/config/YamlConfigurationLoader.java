@@ -21,7 +21,9 @@ public class YamlConfigurationLoader implements ConfigurationLoader {
     public Config loadConfig() {
         Constructor constructor = new Constructor(Config.class);
         Yaml yaml = new Yaml(constructor);
-        try (InputStream yamlFileStream = new FileInputStream(yaml_name)) {
+        ClassLoader loader = YamlConfigurationLoader.class.getClassLoader();
+
+        try (InputStream yamlFileStream = loader.getResourceAsStream(yaml_name)) {
         Config config = yaml.loadAs(yamlFileStream,Config.class);
 
             return config;
