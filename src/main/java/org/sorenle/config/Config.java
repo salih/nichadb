@@ -10,6 +10,8 @@ public class Config {
     //Indicates number of maximum reconect
     public Integer maximum_reconnect_tomark_dead;
 
+    // Server port for nicha clients
+    public Integer server_port;
 
 
 
