@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/nicha.iml" filepath="$PROJECT_DIR$/nicha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nichadb.iml" filepath="$PROJECT_DIR$/.idea/modules/nichadb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nichadb_main.iml" filepath="$PROJECT_DIR$/.idea/modules/nichadb_main.iml" group="nichadb" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nichadb_test.iml" filepath="$PROJECT_DIR$/.idea/modules/nichadb_test.iml" group="nichadb" />
     </modules>
   </component>
 </project>
