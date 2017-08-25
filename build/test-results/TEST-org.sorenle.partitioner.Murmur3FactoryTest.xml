@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.sorenle.partitioner.Murmur3FactoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-08-16T20:38:37" hostname="salih-fedora" time="0.025">
-  <properties/>
-  <testcase name="test32BitPartitioner" classname="org.sorenle.partitioner.Murmur3FactoryTest" time="0.009"/>
-  <testcase name="test128BitPartitioner" classname="org.sorenle.partitioner.Murmur3FactoryTest" time="0.001"/>
-  <testcase name="testSingularity" classname="org.sorenle.partitioner.Murmur3FactoryTest" time="0.004"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

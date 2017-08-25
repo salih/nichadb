@@ -201,7 +201,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .gradle
-/build/
+build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
