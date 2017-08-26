@@ -13,6 +13,8 @@
       <module name="nicha" target="1.8" />
       <module name="nichadb_main" target="1.8" />
       <module name="nichadb_test" target="1.8" />
+      <module name="Projects-nichadb_main" target="1.8" />
+      <module name="Projects-nichadb_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
