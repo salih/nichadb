@@ -1,5 +1,7 @@
 package org.sorenle.config;
 
+import org.sorenle.partitioner.Partitioner;
+
 public class Config {
     // Cluster name
     public String cluster_name;
@@ -12,6 +14,14 @@ public class Config {
 
     // Server port for nicha clients
     public Integer server_port;
+
+    //Partitioner class
+
+    public Partitioner partitioner;
+
+    //SSL Enabled
+
+    public Boolean ssl_enabled;
 
 
 
