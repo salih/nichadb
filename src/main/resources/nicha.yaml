@@ -1,0 +1,4 @@
+cluster_name: nicha-local-test
+server_port: 14900
+ssl_enabled: false
+partitioner: org.sorenle.partitioner.Murmur3Partitioner
