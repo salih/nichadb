@@ -1,4 +1,4 @@
-package org.sorenle.partitioner.node;
+package org.sorenle.node;
 
 import org.junit.Test;
 import org.sorenle.node.NodeStatus;
